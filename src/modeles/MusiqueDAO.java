@@ -32,4 +32,13 @@ public class MusiqueDAO {
         Query query=em.createQuery(requete);
         int nbEntitesModi = query.executeUpdate();
     }
+    public void modifierMusique(Musique musique,int id){
+        String ordre = "update Musique m set m.artiste = :artiste,m.titre = :titre,m.duree = :duree " +
+                "where m.id="+id;
+        Query q = em.createQuery(ordre);
+        q.setParameter("artiste",musique.getArtiste());
+        q.setParameter("titre",musique.getTitre());
+                q.setParameter("duree",musique.getDuree());
+        int nbEntitesModif = q.executeUpdate();
+    }
 }
