@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <Resource id="maDataSource" type="DataSource">
+        JdbcDriver  com.mysql.jdbc.Driver
+        JdbcUrl     jdbc:mysql://localhost/music?useSSL=false
+        UserName    root
+        Password    mednass030916
+    </Resource>
+</resources>

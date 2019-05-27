@@ -1,0 +1,40 @@
+.form-control{
+    width: 50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+label{
+    margin-left: 50vw;
+    margin-right: 50vw;
+    text-align: center;
+}
+input.taille{
+    width: 20vw;
+    margin-right: 0vw;
+    margin-left: 0vw;
+}
+.btn{
+    width: 10vw;
+    margin-right: 45vw;
+    margin-left: 45vw;
+}
+.fa-trash-alt{
+    color: red;
+}
+.fa-dna{
+    color: green;
+}
+.fa-thumbs-up{
+
+    color: green;
+}
+.buttondelet{
+    all:unset;
+}
+.margin{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+

@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="tp19-ServletJpa:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/tp19_ServletJpa_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="tp19-ServletJpa/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="tp19-ServletJpa" />
+          <element id="jpa-descriptors" facet="tp19-ServletJpa/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="org.eclipse.persistence:eclipselink:2.7.4" />
+          <element id="library" level="project" name="javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.47" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
