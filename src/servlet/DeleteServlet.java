@@ -1,5 +1,6 @@
 package servlet;
 
+import modeles.LivreDAO;
 import modeles.MusiqueDAO;
 
 import javax.ejb.EJB;
@@ -12,10 +13,12 @@ import java.io.IOException;
 
 @WebServlet(name = "DeleteServlet" ,urlPatterns = "/DeleteServlet")
 public class DeleteServlet extends HttpServlet {
-@EJB
+
+    @EJB
     MusiqueDAO musiqueDAO;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-int id =Integer.parseInt( request.getParameter("delet"));
+        int id =Integer.parseInt( request.getParameter("delet"));
         musiqueDAO.deletId(id);
         response.sendRedirect("FindAllServlet");
     }

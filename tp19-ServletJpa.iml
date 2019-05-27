@@ -39,7 +39,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="TomEE 8.5.32" level="application_server_libraries" />
     <orderEntry type="library" name="org.eclipse.persistence:eclipselink:2.7.4" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:5.1.47" level="project" />
     <orderEntry type="library" name="javax.servlet:jstl:1.2" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-5.1.47" level="project" />
   </component>
 </module>

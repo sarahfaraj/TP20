@@ -5,8 +5,9 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <jta-data-source>maDataSource</jta-data-source>
         <class>modeles.Musique</class>
+        <class>modeles.Livre</class>
         <properties>
-            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
         </properties>
     </persistence-unit>
 </persistence>

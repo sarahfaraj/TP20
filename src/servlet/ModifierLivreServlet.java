@@ -1,6 +1,8 @@
 package servlet;
 
+import modeles.Livre;
 import modeles.LivreDAO;
+import modeles.Musique;
 import modeles.MusiqueDAO;
 
 import javax.ejb.EJB;
@@ -11,20 +13,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "FindAllServlet",urlPatterns = "/FindAllServlet")
-public class FindAllServlet extends HttpServlet {
+@WebServlet(name = "ModifierLivreServlet", urlPatterns = "/ModifierLivreServlet")
+public class ModifierLivreServlet extends HttpServlet {
     @EJB
-    MusiqueDAO musiqueDAO;
+    LivreDAO livreDAO;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("listMusique",musiqueDAO.findAll());
-        request.setAttribute("id",Integer.parseInt(request.getParameter("modif")));
-        request.getRequestDispatcher("list.jsp").forward(request, response);
+        String auteur= request.getParameter("auteur");
+        String titre =request.getParameter("titre");
+        int id=Integer.parseInt(request.getParameter("ok"));
+        livreDAO.modifierLivre(new Livre(auteur, titre),id);
+        response.sendRedirect("FindAllLivreServlet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        request.setAttribute("listMusique",musiqueDAO.findAll());
-        request.getRequestDispatcher("list.jsp").forward(request, response);
     }
 }

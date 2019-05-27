@@ -2,8 +2,8 @@
 <resources>
     <Resource id="maDataSource" type="DataSource">
         JdbcDriver  com.mysql.jdbc.Driver
-        JdbcUrl     jdbc:mysql://localhost/music?useSSL=false
+        JdbcUrl     jdbc:mysql://localhost:3306/music?useSSL=false
         UserName    root
-        Password    mednass030916
+        Password    humanbooster
     </Resource>
 </resources>
